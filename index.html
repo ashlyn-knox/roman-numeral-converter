@@ -4,26 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roman Numeral Conversion</title>
-    <script src="script.js"></script>
+    <!--Style-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Script-->
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Roman Numeral Conversion Tool</h1>
       <p>Because roman numerals are a pain</p>
     </header>
-    <main>
-      <form id="converter" action="">
-        <legend></legend>
-        <div>
-          <input type="text" name="" id="" required />
-          <label for=""></label>
+    <main class="main">
+      <article class="conversion-tool">
+        <p>Click this button to select what you need to convert to</p>
+        <button onclick="typeChanger()">Type Switcher</button>
+        <h2 id="convert-type"></h2>
+        <form id="convert-tool" action="">
+          <legend>Enter arabic or roman numerals</legend>
+          <div>
+            <input
+              type="text"
+              name="convert-input"
+              id="convert-input"
+              required
+            />
+            <label for="convert-input"></label>
+          </div>
+          <button type="submit" id="convert-btn">Convert</button>
+          <button onclick="typeClear()">Clear</button>
+        </form>
+        <div class="output">
+          <h2 id="output-label"></h2>
+          <h3 id="output-value"></h3>
         </div>
-        <button type="submit" id="convert-btn">Convert</button>
-      </form>
-      <div id="output"></div>
+      </article>
+      <!-- Refactor this so that it doesn't show up until searches are made-->
+      <article class="recent-searches">
+        <h2>Recent Searches</h2>
+        <ul id="conversion-history"></ul>
+        <button id="history-clear">Clear History</button>
+      </article>
     </main>
-    <footer>
-      <p>Ashlyn Knox</p>
+    <footer class="footer">
+      <p>Lilyx xiii</p>
     </footer>
   </body>
 </html>
